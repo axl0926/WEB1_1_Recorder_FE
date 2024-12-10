@@ -47,11 +47,7 @@ const ChatButton = ({ nickName, id, mentorId }: Props) => {
         >
           라이브 피드백 요청하기
         </Button>
-        <Button
-          className="mt-4 w-full text-white"
-          type="submit"
-          onClick={() => router.push(`/chat?opponentId=${id}&name=${nickName}&img=${img}`)}
-        >
+        <Button className="mt-4 w-full text-white" type="submit" onClick={() => router.push(`/chat?opponentId=${id}`)}>
           1:1 채팅하기
         </Button>
       </div>
