@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Providers from "@/app/provider";
+import { Suspense } from "react";
 
 const pretendard = localFont({
   src: "./fonts/PretendardVariable.woff2",
@@ -27,8 +28,9 @@ export default function RootLayout({
     <html lang="kr">
       <body className={`${pretendard.variable} flex min-h-screen flex-col font-pretendard`}>
         <Providers>
+          <Suspense>
           <Header />
-          <main className="grow pt-24">{children}</main> <Footer />
+          <main className="grow pt-24">{children}</main> <Footer /></Suspense>
         </Providers>
       </body>
     </html>
