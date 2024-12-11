@@ -8,13 +8,13 @@ const fetchUtil = async (endpoint: string, method: string, params: Record<string
     "Content-Type": "application/json",
     credentials: "include"
   };
-  let accessToken: string | undefined;
-  if (typeof window !== "undefined") {
-    accessToken = Cookies.get("accessToken");
-  }
-  if (accessToken) {
-    headers.Authorization = `Bearer ${accessToken}`;
-  }
+  // let accessToken: string | undefined;
+  // if (typeof window !== "undefined") {
+  //   accessToken = Cookies.get("accessToken");
+  // }
+  // if (accessToken) {
+  //   headers.Authorization = `Bearer ${accessToken}`;
+  // }
   const response = await fetch(url.toString(), {
     method,
     headers,
